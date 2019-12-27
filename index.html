@@ -208,7 +208,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2019-12-27 17:47:29" itemprop="dateModified" datetime="2019-12-27T17:47:29+08:00">2019-12-27</time>
+                <time title="修改时间：2019-12-27 17:50:21" itemprop="dateModified" datetime="2019-12-27T17:50:21+08:00">2019-12-27</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -233,25 +233,15 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <a id="more"></a>
-
-<h3 id="linux中导入、导出mysql数据"><a href="#linux中导入、导出mysql数据" class="headerlink" title="linux中导入、导出mysql数据"></a>linux中导入、导出mysql数据</h3><h4 id="一、linux中导入mysql数据"><a href="#一、linux中导入mysql数据" class="headerlink" title="一、linux中导入mysql数据"></a>一、linux中导入mysql数据</h4><h5 id="1-首先建空数据库"><a href="#1-首先建空数据库" class="headerlink" title="1.首先建空数据库"></a>1.首先建空数据库</h5><p>mysql&gt;create database abc;</p>
-<h5 id="2-导入数据库"><a href="#2-导入数据库" class="headerlink" title="2.导入数据库"></a>2.导入数据库</h5><p>方法一：<br>（1）选择数据库</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mysql&gt;use abc;</span><br></pre></td></tr></table></figure>
-<p>（2）设置数据库编码</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mysql&gt;set names utf8;</span><br></pre></td></tr></table></figure>
-<p>（3）导入数据（注意sql文件的路径）</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mysql&gt;source &#x2F;home&#x2F;abc&#x2F;abc.sql;</span><br></pre></td></tr></table></figure>
-<p>方法二：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">mysql -u用户名 -p密码 数据库名 &lt; 数据库名.sql</span><br><span class="line">#mysql -uabc_f -p abc &lt; abc.sql</span><br></pre></td></tr></table></figure>
-<p>建议使用第二种方法导入。</p>
-<hr>
-<h4 id="二、linux中导出mysql数据"><a href="#二、linux中导出mysql数据" class="headerlink" title="二、linux中导出mysql数据"></a>二、linux中导出mysql数据</h4><h5 id="1-导出数据和表结构："><a href="#1-导出数据和表结构：" class="headerlink" title="1.导出数据和表结构："></a>1.导出数据和表结构：</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">mysqldump -u用户名 -p密码 数据库名 &gt; 数据库名.sql</span><br><span class="line">#&#x2F;usr&#x2F;local&#x2F;mysql&#x2F;bin&#x2F;   mysqldump -uroot -p abc &gt; abc.sql</span><br><span class="line">敲回车后会提示输入密码</span><br></pre></td></tr></table></figure>
-
-<h5 id="2-只导出表结构"><a href="#2-只导出表结构" class="headerlink" title="2.只导出表结构"></a>2.只导出表结构</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">mysqldump -u用户名 -p密码 -d 数据库名 &gt; 数据库名.sql</span><br><span class="line">#&#x2F;usr&#x2F;local&#x2F;mysql&#x2F;bin&#x2F;   mysqldump -uroot -p -d abc &gt; abc.sql</span><br></pre></td></tr></table></figure>
-
-<p>注：/usr/local/mysql/bin/  —&gt;  mysql的data目录</p>
-
+          <hr>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2019/12/24/201912242324/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
@@ -301,7 +291,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2019-12-27 17:47:16" itemprop="dateModified" datetime="2019-12-27T17:47:16+08:00">2019-12-27</time>
+                <time title="修改时间：2019-12-27 17:50:26" itemprop="dateModified" datetime="2019-12-27T17:50:26+08:00">2019-12-27</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -326,17 +316,15 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <a id="more"></a>
-
-<h3 id="忘记MySQL的root密码的解决方法"><a href="#忘记MySQL的root密码的解决方法" class="headerlink" title="忘记MySQL的root密码的解决方法"></a>忘记MySQL的root密码的解决方法</h3><hr>
-<h4 id="修改配置文件my-cnf，在配置文件-mysqld-下添加skip-grant-tables，重启MySQL服务即可免密码登录，意思是启动-MySQL-服务的时候跳过权限表认证。-启动后，连接到-MySQL-的-root-将不需要口令。"><a href="#修改配置文件my-cnf，在配置文件-mysqld-下添加skip-grant-tables，重启MySQL服务即可免密码登录，意思是启动-MySQL-服务的时候跳过权限表认证。-启动后，连接到-MySQL-的-root-将不需要口令。" class="headerlink" title="修改配置文件my.cnf，在配置文件[mysqld]下添加skip-grant-tables，重启MySQL服务即可免密码登录，意思是启动 MySQL 服务的时候跳过权限表认证。 启动后，连接到 MySQL 的 root 将不需要口令。"></a>修改配置文件my.cnf，在配置文件[mysqld]下添加skip-grant-tables，重启MySQL服务即可免密码登录，意思是启动 MySQL 服务的时候跳过权限表认证。 启动后，连接到 MySQL 的 root 将不需要口令。</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"># SERVER SECTION</span><br><span class="line"># ----------------------------------------------------------------------</span><br><span class="line">#</span><br><span class="line"># The following options will be read by the MySQL Server. Make sure that</span><br><span class="line"># you have installed the server correctly (see above) so it reads this </span><br><span class="line"># file.</span><br><span class="line">#</span><br><span class="line">[mysqld]</span><br><span class="line"></span><br><span class="line">skip-grant-tables</span><br></pre></td></tr></table></figure>
-
-<h4 id="用空密码的-root-用户连接到-MySQL，并且更改-root-口令"><a href="#用空密码的-root-用户连接到-MySQL，并且更改-root-口令" class="headerlink" title="用空密码的 root 用户连接到 MySQL，并且更改 root 口令:"></a>用空密码的 root 用户连接到 MySQL，并且更改 root 口令:</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">[root@localhost mysql]# mysql -uroot</span><br><span class="line">Welcome to the MySQL monitor. Commands end with ; or \g.</span><br><span class="line">Your MySQL connection id is 53</span><br><span class="line">Server version: 5.0.41-community-log MySQL Community Edition (GPL)</span><br><span class="line">Type &#39;help;&#39; or &#39;\h&#39; for help. Type &#39;\c&#39; to clear the buffer.</span><br><span class="line">mysql&gt;</span><br><span class="line">mysql&gt; ALTER USER &#39;root&#39;@&#39;localhost&#39; IDENTIFIED WITH mysql_native_password BY &#39;123&#39;;  </span><br><span class="line"></span><br><span class="line"> ERROR 1290 (HY000): The MySQL server is running with the --skip-grant-tables option so it cannot execute this statement</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">mysql&gt; update user set authentication_string &#x3D; NULL where user &#x3D; &#39;root&#39;;</span><br><span class="line">Query OK, 1 row affected (0.00 sec)</span><br></pre></td></tr></table></figure>
-
-<p>上面是先用grant的方式修改root密码，但是由于使用了配置了skip-grant-tables 选项，使用“alter user”命令更改密码失败，直接更新 user 表的 authentication_string字段后更改密码成功。</p>
-<h4 id="到my-cnf-中删除skip-grant-tables选项，然后直接用mysql-uroot免密码登录后，在执行如下语句重设密码"><a href="#到my-cnf-中删除skip-grant-tables选项，然后直接用mysql-uroot免密码登录后，在执行如下语句重设密码" class="headerlink" title="到my.cnf 中删除skip-grant-tables选项，然后直接用mysql -uroot免密码登录后，在执行如下语句重设密码"></a>到my.cnf 中删除skip-grant-tables选项，然后直接用mysql -uroot免密码登录后，在执行如下语句重设密码</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mysql&gt; ALTER USER &#39;root&#39;@&#39;localhost&#39; IDENTIFIED WITH mysql_native_password BY &#39;123&#39;;</span><br></pre></td></tr></table></figure>
-
-<h4 id="重新用-root-登录时，必须输入新口令。"><a href="#重新用-root-登录时，必须输入新口令。" class="headerlink" title="重新用 root 登录时，必须输入新口令。"></a>重新用 root 登录时，必须输入新口令。</h4>
+          <hr>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2019/12/24/201912242312/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
@@ -386,7 +374,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2019-12-27 17:47:12" itemprop="dateModified" datetime="2019-12-27T17:47:12+08:00">2019-12-27</time>
+                <time title="修改时间：2019-12-27 17:50:31" itemprop="dateModified" datetime="2019-12-27T17:50:31+08:00">2019-12-27</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -411,13 +399,15 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <a id="more"></a>
-
-<h3 id="MySQL分组查询某个字段值最大的一条记录"><a href="#MySQL分组查询某个字段值最大的一条记录" class="headerlink" title="MySQL分组查询某个字段值最大的一条记录"></a>MySQL分组查询某个字段值最大的一条记录</h3><hr>
-<h4 id="示例（查找每组中SUCCESS-POINT字段值最大的一条记录，并删除其他记录）"><a href="#示例（查找每组中SUCCESS-POINT字段值最大的一条记录，并删除其他记录）" class="headerlink" title="示例（查找每组中SUCCESS_POINT字段值最大的一条记录，并删除其他记录）"></a>示例（查找每组中SUCCESS_POINT字段值最大的一条记录，并删除其他记录）</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">DELETE from table</span><br><span class="line">    WHERE STUDENT_GUID &#x3D; &#39;1001&#39;</span><br><span class="line">    AND GUID not in (</span><br><span class="line">            SELECT GUID FROM (</span><br><span class="line">                SELECT * from (</span><br><span class="line">                    SELECT * from table</span><br><span class="line">                    where STUDENT_GUID &#x3D; &#39;1001&#39; </span><br><span class="line">                    ORDER BY SUCCESS_POINT DESC LIMIT 2000</span><br><span class="line">                ) as b</span><br><span class="line">                group by b.LIBRARY_GUID, b.STUDEENT_TYPE </span><br><span class="line">                ORDER BY SUCCESS_POINT DESC</span><br><span class="line">            ) as a</span><br><span class="line">    )</span><br></pre></td></tr></table></figure>
-
-<p>一定要先对记录按要求进行排序，再进行分组。这样分组查询后的数据才是需要的数据，并且为了排序能够先执行，这里使用了limit。</p>
-
+          <hr>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2019/12/24/201912242310/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
@@ -467,7 +457,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2019-12-27 17:47:07" itemprop="dateModified" datetime="2019-12-27T17:47:07+08:00">2019-12-27</time>
+                <time title="修改时间：2019-12-27 17:50:36" itemprop="dateModified" datetime="2019-12-27T17:50:36+08:00">2019-12-27</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -492,22 +482,15 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <a id="more"></a>
-
-<h3 id="MySQL定时备份脚本"><a href="#MySQL定时备份脚本" class="headerlink" title="MySQL定时备份脚本"></a>MySQL定时备份脚本</h3><hr>
-<p>例如当前备份近10天的库，</p>
-<p>#host：数据库主机IP地址</p>
-<p>#port：MySQL数据库端口</p>
-<p>#user：用户名</p>
-<p>#pass：密码</p>
-<p>#dbname：数据库名</p>
-<p>#D:\Program Files\MySQL\MySQL Server 5.5\bin\mysqldump：MySQL安装目录</p>
-<p>#backupfile：备份目录路径</p>
-<p>#注意：有路径有空格情况下，要加上引号！！！</p>
-<hr>
-<p>MySQL备份脚本内容如下：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">@echo off</span><br><span class="line">set hour&#x3D;%time:~0,2%</span><br><span class="line">if &quot;%time:~0,1%&quot;&#x3D;&#x3D;&quot; &quot; set hour&#x3D;0%time:~1,1%</span><br><span class="line">set now&#x3D;%Date:~0,4%%Date:~5,2%%Date:~8,2%%hour%%Time:~3,2%%Time:~6,2%</span><br><span class="line">echo %now%</span><br><span class="line">set host&#x3D;XXX.XXX.XXX.XXX</span><br><span class="line">set port&#x3D;3306</span><br><span class="line">set user&#x3D;root</span><br><span class="line">set pass&#x3D;root</span><br><span class="line">set dbname&#x3D;dbname</span><br><span class="line">set backupfile&#x3D;D:\backup\0_dbbackup_day\%dbname%-%now%.sql</span><br><span class="line">&quot;D:\Program Files\MySQL\MySQL Server 5.5\bin\mysqldump&quot; -h%host% -P%port% -u%user% -p%pass% -c --add-drop-table %dbname% &gt; %backupfile%</span><br><span class="line">echo delete files before 10 days</span><br><span class="line">forfiles &#x2F;p D:\backup\0_dbbackup_day &#x2F;s &#x2F;m *.sql &#x2F;d -10 &#x2F;c &quot;cmd &#x2F;c del @file &#x2F;f&quot;</span><br><span class="line">%注意：路径中有空格的要加上双引号%</span><br></pre></td></tr></table></figure>
-
+          <hr>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2019/12/17/20191217/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
@@ -557,7 +540,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2019-12-27 17:46:56" itemprop="dateModified" datetime="2019-12-27T17:46:56+08:00">2019-12-27</time>
+                <time title="修改时间：2019-12-27 17:50:40" itemprop="dateModified" datetime="2019-12-27T17:50:40+08:00">2019-12-27</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -582,118 +565,15 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <a id="more"></a>
-
-<h3 id="Markdown-标题"><a href="#Markdown-标题" class="headerlink" title="Markdown 标题"></a><a href="https://www.runoob.com/markdown/md-title.html" target="_blank" rel="noopener">Markdown 标题</a></h3><hr>
-<h4 id="1、使用-和-标记一级和二级标题"><a href="#1、使用-和-标记一级和二级标题" class="headerlink" title="1、使用 = 和 - 标记一级和二级标题"></a>1、使用 = 和 - 标记一级和二级标题</h4><h1 id="我展示的是一级标题"><a href="#我展示的是一级标题" class="headerlink" title="我展示的是一级标题"></a>我展示的是一级标题</h1><h2 id="我展示的是二级标题"><a href="#我展示的是二级标题" class="headerlink" title="我展示的是二级标题"></a>我展示的是二级标题</h2><h4 id="2、使用-号标记"><a href="#2、使用-号标记" class="headerlink" title="2、使用 # 号标记"></a>2、使用 # 号标记</h4><p>使用 # 号可表示 1-6 级标题，一级标题对应一个 # 号，二级标题对应两个 # 号，以此类推。</p>
-<h1 id="一级标题"><a href="#一级标题" class="headerlink" title="一级标题"></a>一级标题</h1><h2 id="二级标题"><a href="#二级标题" class="headerlink" title="二级标题"></a>二级标题</h2><h3 id="三级标题"><a href="#三级标题" class="headerlink" title="三级标题"></a>三级标题</h3><h4 id="四级标题"><a href="#四级标题" class="headerlink" title="四级标题"></a>四级标题</h4><h5 id="五级标题"><a href="#五级标题" class="headerlink" title="五级标题"></a>五级标题</h5><h6 id="六级标题"><a href="#六级标题" class="headerlink" title="六级标题"></a>六级标题</h6><h3 id="Markdown-段落"><a href="#Markdown-段落" class="headerlink" title="Markdown 段落"></a><a href="https://www.runoob.com/markdown/md-paragraph.html" target="_blank" rel="noopener">Markdown 段落</a></h3><p>Markdown 段落没有特殊的格式，直接编写文字就好，段落的换行是使用两个以上空格加上回车。 </p>
-<p>当然也可以在段落后面使用一个空行来表示重新开始一个段落。</p>
-<h4 id="1、字体"><a href="#1、字体" class="headerlink" title="1、字体"></a>1、字体</h4><p>Markdown 可以使用以下几种字体：  </p>
-<p><em>斜体文本</em></p>
-<p><em>斜体文本</em></p>
-<p><strong>粗体文本</strong></p>
-<p><strong>粗体文本</strong></p>
-<p><strong><em>粗斜体文本</em></strong></p>
-<p><strong><em>粗斜体文本</em></strong></p>
-<h4 id="2、分隔线"><a href="#2、分隔线" class="headerlink" title="2、分隔线"></a>2、分隔线</h4><p>你可以在一行中用三个以上的星号、减号、底线来建立一个分隔线，行内不能有其他东西。你也可以在星号或是减号中间插入空格。下面每种写法都可以建立分隔线：  </p>
-<hr>
-<hr>
-<hr>
-<hr>
-<hr>
-<h4 id="3、删除线"><a href="#3、删除线" class="headerlink" title="3、删除线"></a>3、删除线</h4><p>如果段落上的文字要添加删除线，只需要在文字的两端加上两个波浪线 ~~ 即可，实例如下：</p>
-<p>RUNOOB.COM<br>GOOGLE.COM<br><del>BAIDU.COM</del></p>
-<h4 id="4、下划线"><a href="#4、下划线" class="headerlink" title="4、下划线"></a>4、下划线</h4><p>下划线可以通过 HTML 的 <code>&lt;u&gt;</code> 标签来实现：</p>
-<p><u>带下划线文本</u></p>
-<h4 id="5、脚注"><a href="#5、脚注" class="headerlink" title="5、脚注"></a>5、脚注</h4><p>脚注是对文本的补充说明。</p>
-<p>[^要注明的文本]</p>
-<p>创建脚注格式类似这样 [^RUNOOB]</p>
-<h3 id="Markdown-列表"><a href="#Markdown-列表" class="headerlink" title="Markdown 列表"></a><a href="https://www.runoob.com/markdown/md-lists.html" target="_blank" rel="noopener">Markdown 列表</a></h3><p> Markdown 支持有序列表和无序列表。无序列表使用星号(*)、加号(+)或是减号(-)作为列表标记：</p>
-<ul>
-<li>第一项</li>
-<li>第二项</li>
-<li>第三项</li>
-</ul>
-<ul>
-<li>第一项</li>
-<li>第二项</li>
-<li>第三项</li>
-</ul>
-<ul>
-<li>第一项</li>
-<li>第二项</li>
-<li>第三项</li>
-</ul>
-<h4 id="1、有序列表使用数字并加上-号来表示，如："><a href="#1、有序列表使用数字并加上-号来表示，如：" class="headerlink" title="1、有序列表使用数字并加上 . 号来表示，如："></a>1、有序列表使用数字并加上 . 号来表示，如：</h4><ol>
-<li>第一项</li>
-<li>第二项</li>
-<li>第三项</li>
-</ol>
-<h4 id="2、列表嵌套只需在子列表中的选项添加四个空格即可："><a href="#2、列表嵌套只需在子列表中的选项添加四个空格即可：" class="headerlink" title="2、列表嵌套只需在子列表中的选项添加四个空格即可："></a>2、列表嵌套只需在子列表中的选项添加四个空格即可：</h4><ol>
-<li>第一项：<ul>
-<li>第一项嵌套的第一个元素</li>
-<li>第一项嵌套的第二个元素</li>
-</ul>
-</li>
-<li>第二项：<ul>
-<li>第二项嵌套的第一个元素</li>
-<li>第二项嵌套的第二个元素</li>
-</ul>
-</li>
-</ol>
-<h3 id="Markdown-区块"><a href="#Markdown-区块" class="headerlink" title="Markdown 区块"></a><a href="https://www.runoob.com/markdown/md-block.html" target="_blank" rel="noopener">Markdown 区块</a></h3><p>Markdown 区块引用是在段落开头使用 &gt; 符号 ，然后后面紧跟一个空格符号：</p>
-<blockquote>
-<p>区块引用<br>菜鸟教程<br>学的不仅是技术更是梦想</p>
-</blockquote>
-<p>另外区块是可以嵌套的，一个 &gt; 符号是最外层，两个 &gt; 符号是第一层嵌套，以此类推退：</p>
-<blockquote>
-<p>最外层</p>
-<blockquote>
-<p>第一层嵌套</p>
-<blockquote>
-<p>第二层嵌套</p>
-</blockquote>
-</blockquote>
-</blockquote>
-<h4 id="1、区块中使用列表"><a href="#1、区块中使用列表" class="headerlink" title="1、区块中使用列表"></a>1、区块中使用列表</h4><blockquote>
-<p>区块中使用列表</p>
-<ol>
-<li>第一项</li>
-<li>第二项</li>
-</ol>
-<ul>
-<li>第一项</li>
-<li>第二项</li>
-<li>第三项</li>
-</ul>
-</blockquote>
-<h4 id="2、列表中使用区块"><a href="#2、列表中使用区块" class="headerlink" title="2、列表中使用区块"></a>2、列表中使用区块</h4><p>如果要在列表项目内放进区块，那么就需要在 &gt; 前添加四个空格的缩进。区块中使用列表实例如下：</p>
-<ul>
-<li>第一项<blockquote>
-<p>菜鸟教程<br>学的不仅是技术更是梦想</p>
-</blockquote>
-</li>
-<li>第二项</li>
-</ul>
-<h3 id="Markdown-代码"><a href="#Markdown-代码" class="headerlink" title="Markdown 代码"></a><a href="https://www.runoob.com/markdown/md-code.html" target="_blank" rel="noopener">Markdown 代码</a></h3><p>如果是段落上的一个函数或片段的代码可以用反引号把它包起来（`），例如：</p>
-<p><code>printf()</code> 函数</p>
-<h4 id="1、代码区块"><a href="#1、代码区块" class="headerlink" title="1、代码区块"></a>1、代码区块</h4><p>代码区块使用 4 个空格或者一个制表符（Tab 键）。</p>
-<p>你也可以用 ``` 包裹一段代码，并指定一种语言（也可以不指定）：</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$(<span class="built_in">document</span>).ready(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">    alert(<span class="string">'RUNOOB'</span>);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
-
-<h3 id="Markdown-链接"><a href="#Markdown-链接" class="headerlink" title="Markdown 链接"></a><a href="https://www.runoob.com/markdown/md-link.html" target="_blank" rel="noopener">Markdown 链接</a></h3><p>链接使用方法如下：</p>
-<p><a href="链接地址">链接名称</a></p>
-<p>或者</p>
-<p>&lt;链接地址&gt;</p>
-<p>例如：</p>
-<p>这是一个链接 <a href="https://www.runoob.com" target="_blank" rel="noopener">菜鸟教程</a></p>
-<p>直接使用链接地址：</p>
-<p><a href="https://www.runoob.com" target="_blank" rel="noopener">https://www.runoob.com</a></p>
-<h4 id="1、高级链接"><a href="#1、高级链接" class="headerlink" title="1、高级链接"></a>1、高级链接</h4><p>链接也可以用变量来代替，文档末尾附带变量地址：<br>这个链接用 1 作为网址变量 <a href="http://www.google.com/" target="_blank" rel="noopener">Google</a><br>这个链接用 runoob 作为网址变量 <a href="http://www.runoob.com/" target="_blank" rel="noopener">Runoob</a><br>然后在文档的结尾为变量赋值（网址）</p>
-<h3 id="Markdown-图片"><a href="#Markdown-图片" class="headerlink" title="Markdown 图片"></a><a href="https://www.runoob.com/markdown/md-image.html" target="_blank" rel="noopener">Markdown 图片</a></h3><hr>
-<h3 id="Markdown-表格"><a href="#Markdown-表格" class="headerlink" title="Markdown 表格"></a><a href="https://www.runoob.com/markdown/md-table.html" target="_blank" rel="noopener">Markdown 表格</a></h3><hr>
-<h3 id="Markdown-高级技巧"><a href="#Markdown-高级技巧" class="headerlink" title="Markdown 高级技巧"></a><a href="https://www.runoob.com/markdown/md-advance.html" target="_blank" rel="noopener">Markdown 高级技巧</a></h3><hr>
-
+          <hr>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2019/12/15/20191216/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
