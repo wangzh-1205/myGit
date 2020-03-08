@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 4.1.1">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css">
+
+
+<script id="hexo-configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    hostname: new URL('https://wangzh-1205.github.io').hostname,
+    root: '/',
+    scheme: 'Mist',
+    version: '7.6.0',
+    exturl: false,
+    sidebar: {"position":"right","display":"always","padding":18,"offset":12,"onmobile":false},
+    copycode: {"enable":false,"show_result":false,"style":null},
+    back2top: {"enable":true,"sidebar":false,"scrollpercent":false},
+    bookmark: {"enable":false,"color":"#222","save":"auto"},
+    fancybox: false,
+    mediumzoom: false,
+    lazyload: false,
+    pangu: false,
+    algolia: {
+      appID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    },
+    localsearch: {"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},
+    path: '',
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}
+  };
+</script>
+
+  <meta property="og:type" content="article">
+<meta property="og:title" content="Java基础">
+<meta property="og:url" content="https:&#x2F;&#x2F;wangzh-1205.github.io&#x2F;2020&#x2F;03&#x2F;05&#x2F;20200305&#x2F;index.html">
+<meta property="og:site_name" content="我的笔记">
+<meta property="article:published_time" content="2020-03-05T13:48:13.714Z">
+<meta property="article:modified_time" content="2020-03-08T16:04:26.998Z">
+<meta property="article:author" content="wangzh">
+<meta property="article:tag" content="java">
+<meta name="twitter:card" content="summary">
+
+<link rel="canonical" href="https://wangzh-1205.github.io/2020/03/05/20200305/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome: false,
+    isPost: true,
+    isPage: false,
+    isArchive: false
+  };
+</script>
+
+  <title>Java基础 | 我的笔记</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-meta">
+
+    <div>
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">我的笔记</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+  </div>
+
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+</div>
+
+
+<nav class="site-nav">
+  
+  <ul id="menu" class="menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-fw fa-home"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-fw fa-tags"></i>标签</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-fw fa-th"></i>分类</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>归档</a>
+
+  </li>
+  </ul>
+
+</nav>
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content">
+            
+
+  <div class="posts-expand">
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block " lang="zh-Hans">
+    <link itemprop="mainEntityOfPage" href="https://wangzh-1205.github.io/2020/03/05/20200305/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/tx.jpg">
+      <meta itemprop="name" content="wangzh">
+      <meta itemprop="description" content="记录点点滴滴">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="我的笔记">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          Java基础
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2020-03-05 21:48:13" itemprop="dateCreated datePublished" datetime="2020-03-05T21:48:13+08:00">2020-03-05</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2020-03-09 00:04:26" itemprop="dateModified" datetime="2020-03-09T00:04:26+08:00">2020-03-09</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E5%90%8E%E7%AB%AF/" itemprop="url" rel="index">
+                    <span itemprop="name">后端</span>
+                  </a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <hr>
+<a id="more"></a>
+
+<h3 id="CSS"><a href="#CSS" class="headerlink" title="CSS"></a>CSS</h3><hr>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br><span class="line">151</span><br><span class="line">152</span><br><span class="line">153</span><br><span class="line">154</span><br><span class="line">155</span><br><span class="line">156</span><br><span class="line">157</span><br><span class="line">158</span><br><span class="line">159</span><br><span class="line">160</span><br><span class="line">161</span><br><span class="line">162</span><br><span class="line">163</span><br><span class="line">164</span><br><span class="line">165</span><br><span class="line">166</span><br><span class="line">167</span><br><span class="line">168</span><br><span class="line">169</span><br><span class="line">170</span><br><span class="line">171</span><br><span class="line">172</span><br><span class="line">173</span><br><span class="line">174</span><br><span class="line">175</span><br><span class="line">176</span><br><span class="line">177</span><br><span class="line">178</span><br><span class="line">179</span><br><span class="line">180</span><br><span class="line">181</span><br><span class="line">182</span><br><span class="line">183</span><br><span class="line">184</span><br><span class="line">185</span><br><span class="line">186</span><br><span class="line">187</span><br><span class="line">188</span><br><span class="line">189</span><br><span class="line">190</span><br><span class="line">191</span><br><span class="line">192</span><br><span class="line">193</span><br><span class="line">194</span><br><span class="line">195</span><br><span class="line">196</span><br><span class="line">197</span><br><span class="line">198</span><br><span class="line">199</span><br><span class="line">200</span><br><span class="line">201</span><br><span class="line">202</span><br><span class="line">203</span><br><span class="line">204</span><br><span class="line">205</span><br><span class="line">206</span><br><span class="line">207</span><br><span class="line">208</span><br><span class="line">209</span><br><span class="line">210</span><br><span class="line">211</span><br><span class="line">212</span><br><span class="line">213</span><br><span class="line">214</span><br><span class="line">215</span><br><span class="line">216</span><br><span class="line">217</span><br><span class="line">218</span><br><span class="line">219</span><br><span class="line">220</span><br><span class="line">221</span><br><span class="line">222</span><br><span class="line">223</span><br><span class="line">224</span><br><span class="line">225</span><br><span class="line">226</span><br><span class="line">227</span><br><span class="line">228</span><br><span class="line">229</span><br><span class="line">230</span><br><span class="line">231</span><br><span class="line">232</span><br><span class="line">233</span><br><span class="line">234</span><br><span class="line">235</span><br><span class="line">236</span><br><span class="line">237</span><br><span class="line">238</span><br><span class="line">239</span><br><span class="line">240</span><br><span class="line">241</span><br><span class="line">242</span><br><span class="line">243</span><br><span class="line">244</span><br><span class="line">245</span><br><span class="line">246</span><br><span class="line">247</span><br><span class="line">248</span><br><span class="line">249</span><br><span class="line">250</span><br><span class="line">251</span><br><span class="line">252</span><br><span class="line">253</span><br><span class="line">254</span><br><span class="line">255</span><br><span class="line">256</span><br><span class="line">257</span><br><span class="line">258</span><br><span class="line">259</span><br><span class="line">260</span><br><span class="line">261</span><br><span class="line">262</span><br><span class="line">263</span><br><span class="line">264</span><br><span class="line">265</span><br><span class="line">266</span><br><span class="line">267</span><br><span class="line">268</span><br><span class="line">269</span><br><span class="line">270</span><br><span class="line">271</span><br><span class="line">272</span><br><span class="line">273</span><br><span class="line">274</span><br><span class="line">275</span><br><span class="line">276</span><br><span class="line">277</span><br><span class="line">278</span><br><span class="line">279</span><br><span class="line">280</span><br><span class="line">281</span><br><span class="line">282</span><br><span class="line">283</span><br><span class="line">284</span><br><span class="line">285</span><br><span class="line">286</span><br><span class="line">287</span><br><span class="line">288</span><br><span class="line">289</span><br><span class="line">290</span><br><span class="line">291</span><br><span class="line">292</span><br><span class="line">293</span><br><span class="line">294</span><br><span class="line">295</span><br><span class="line">296</span><br><span class="line">297</span><br><span class="line">298</span><br><span class="line">299</span><br><span class="line">300</span><br><span class="line">301</span><br><span class="line">302</span><br><span class="line">303</span><br><span class="line">304</span><br><span class="line">305</span><br><span class="line">306</span><br><span class="line">307</span><br><span class="line">308</span><br><span class="line">309</span><br><span class="line">310</span><br><span class="line">311</span><br><span class="line">312</span><br><span class="line">313</span><br><span class="line">314</span><br><span class="line">315</span><br><span class="line">316</span><br><span class="line">317</span><br><span class="line">318</span><br><span class="line">319</span><br><span class="line">320</span><br><span class="line">321</span><br><span class="line">322</span><br><span class="line">323</span><br><span class="line">324</span><br><span class="line">325</span><br></pre></td><td class="code"><pre><span class="line">1.计算机存储单元</span><br><span class="line">    位（bit）：一个数字0或者一个数字1，代表一位</span><br><span class="line">    字节（Byte）：每逢8位是一个字节，这是数据存储的最小单位。</span><br><span class="line">    1 Byte &#x3D; 8 bit</span><br><span class="line">    1 KB &#x3D; 1024 Byte</span><br><span class="line">    1 MB &#x3D; 1024 KB</span><br><span class="line">    1 GB &#x3D; 1024 MB</span><br><span class="line">    1 TB &#x3D; 1024 GB</span><br><span class="line">    1 PB &#x3D; 1024 TB</span><br><span class="line">    1 EB &#x3D; 1024 PB</span><br><span class="line">    1 ZB &#x3D; 1024 EB </span><br><span class="line"></span><br><span class="line">2.JDK、JRE与JVM</span><br><span class="line">    JVM：虚拟机</span><br><span class="line">    JRE：java程序运行时环境，包含JVM和运行时所需的核心类库</span><br><span class="line">    JDK：java程序开发工具包，包含JRE和开发人员使用的工具</span><br><span class="line"></span><br><span class="line">3.常量</span><br><span class="line">    在程序运行期间，固定不变的量</span><br><span class="line">    常量的分类：</span><br><span class="line">        1.字符串常量</span><br><span class="line">        2.整数常量</span><br><span class="line">        3.浮点数常量</span><br><span class="line">        4.字符常量</span><br><span class="line">        5.布尔常量</span><br><span class="line">        6.空常量</span><br><span class="line"></span><br><span class="line">4.数据类型</span><br><span class="line">    基本数据类型</span><br><span class="line">        整数型</span><br><span class="line">            byte、short、int、long</span><br><span class="line">        浮点型</span><br><span class="line">            float、double</span><br><span class="line">        字符型</span><br><span class="line">            char</span><br><span class="line">        布尔型</span><br><span class="line">            boolean</span><br><span class="line">    引用数据类型</span><br><span class="line">        字符串、数组、类、接口、Lambda</span><br><span class="line"></span><br><span class="line">    注意事项：</span><br><span class="line">        1.字符串不是基本数据类型，而是引用数据类型。</span><br><span class="line">        2.浮点型可能只是一个近似值，并非精确的值。</span><br><span class="line">        3.数据范围与字节数不一定相关，例如float数据范围比long更加广泛，但是float是4字节，long是8字节。</span><br><span class="line">        4.浮点数当中默认类型是double。如果一定要使用float类型，需要加上一个后缀F。如果是整数，默认是int类型，如果一定要使用long类型，需要加上一个后缀L。推荐使用大写字母后缀。</span><br><span class="line"></span><br><span class="line">5.变量</span><br><span class="line">    在程序运行期间，内容可以发生改变的量。</span><br><span class="line">    注意：</span><br><span class="line">        1.如果创建多个变量，那么变量之间名称不可以重复。</span><br><span class="line">        2.对于float和long类型来说，字母后缀F和L不要丢掉。</span><br><span class="line">        3.如果使用byte或者short类型的变量，那么右侧的数据值不能超过左侧类型的范围。</span><br><span class="line">        4.没有进行赋值的变量，不能直接使用；一定要赋值之后，才能使用。</span><br><span class="line">        5.变量使用不能超过作用域的范围。</span><br><span class="line">            [作用域]：从定义变量的一行开始，一直到直接所属的大括号结束为止。</span><br><span class="line">        6.可以通过一个语句来创建多个变量，但是一般情况不推荐使用。</span><br><span class="line"></span><br><span class="line">6.数据类型的转换</span><br><span class="line">    自动类型转换（隐式）</span><br><span class="line">        1.特点：代码不需要进行特殊处理，自动完成</span><br><span class="line">        2.规则：数据范围从小到大（精度低的转换为精度高的）</span><br><span class="line">    </span><br><span class="line">    强制类型转换</span><br><span class="line">        1.特点：代码需要进行特殊的格式处理，不能自动完成</span><br><span class="line">        2.格式：范围小的类型 范围小的变量名 &#x3D; （范围小的类型）原本范围大的数据</span><br><span class="line">            例： int num &#x3D; (int) 100L;</span><br><span class="line"></span><br><span class="line">    注意事项：</span><br><span class="line">        1.强制类型转换一般不推荐使用，因为有可能发生精度损失、数据溢出。</span><br><span class="line">        2.byte&#x2F;short&#x2F;char这三种类型都可以发生数学运算，例如加法&quot;+&quot;。</span><br><span class="line">        3.byte&#x2F;short&#x2F;char这三种类型在运算时，都会被首先提升为int类型，然后再计算。</span><br><span class="line">        4.boolean类型不能发生数据类型转换。</span><br><span class="line"></span><br><span class="line">7.运算符与表达式</span><br><span class="line">    运算符：进行特定操作的符号。例如：+</span><br><span class="line">        注意事项：</span><br><span class="line">            1.一旦运算当中有不同类型的数据，那么结果将会是数据类型范围大的那种</span><br><span class="line"></span><br><span class="line">    表达式：用运算符连起来的式子叫做表达式。</span><br><span class="line">        对于一个整数的表达式来说，除法用的是整除。整数除以整数，结果仍然是整数。只看商，不看余数。</span><br><span class="line">        只有对于整数的除法来说，取模运算符才有余数的意义</span><br><span class="line"></span><br><span class="line">    四则运算：加：+ 、减：- 、乘：* 、除：&#x2F; 。</span><br><span class="line">        四则运算中的加号&quot;+&quot;常见的三种用法：</span><br><span class="line">            1.对于数值来说，就是加法</span><br><span class="line">            2.对于字符char类型来说，在计算之前，char会被提升为int，然后再计算。char类型字符，和int类型数字，之间的对照关系表：ASCII、Unicode。</span><br><span class="line">            3.对于字符串String来说，加号代表字符串连接操作。任何数据类型和字符串进行连接的时候，结果会变成字符串。</span><br><span class="line"></span><br><span class="line">    取模（取余数）：%</span><br><span class="line"></span><br><span class="line">    自增：++ 、自减：-- 运算符</span><br><span class="line">        使用格式：写在变量名称之前或者写在变量名称之后。</span><br><span class="line">        使用方式：</span><br><span class="line">            1.单独使用：不与其他任何运算操作混合，自己独立成为一个步骤。</span><br><span class="line">            2.混合使用：和其他操作混合，例如与赋值混合，或者与打印操作混合等。</span><br><span class="line">        使用区别：</span><br><span class="line">            1.在单独使用时，前++与后++没有任何区别。也就是++num与num++完全一样。</span><br><span class="line">            2.在混合时，如果是前++，那么变量先加后用。如果是后++，那么变量先用后加。</span><br><span class="line">        注意事项：</span><br><span class="line">            1.只有变量才能使用自增、自减运算符。常量不可发生改变，所以不能使用</span><br><span class="line"></span><br><span class="line">    赋值运算符：</span><br><span class="line">        基本赋值运算符：就是一个&quot;&#x3D;&quot;号，代表将右边的值交给左边的变量。</span><br><span class="line">            int a &#x3D; 10;</span><br><span class="line">        复合赋值运算符：</span><br><span class="line">            +&#x3D;      a +&#x3D; 3      a &#x3D; a + 3</span><br><span class="line">            -&#x3D;      a -&#x3D; 3      a &#x3D; a - 3</span><br><span class="line">            *&#x3D;      a *&#x3D; 3      a &#x3D; a * 3</span><br><span class="line">            &#x2F;&#x3D;      a &#x2F;&#x3D; 3      a &#x3D; a &#x2F; 3</span><br><span class="line">            %&#x3D;      a %&#x3D; 3      a &#x3D; a % 3</span><br><span class="line">            注意事项：</span><br><span class="line">                1.只有变量才能使用赋值运算符，常量不能进行赋值运算。</span><br><span class="line">                2.复合辅助运算符中隐含了一个强制类型转换。</span><br><span class="line"></span><br><span class="line">    比较运算符：</span><br><span class="line">        大于：      &gt;</span><br><span class="line">        小于：      &lt;</span><br><span class="line">        大于等于：  &gt;&#x3D;</span><br><span class="line">        小于等于：  &lt;&#x3D;</span><br><span class="line">        相等：      &#x3D;&#x3D;</span><br><span class="line">        不相等：    !&#x3D;</span><br><span class="line">        注意事项：</span><br><span class="line">            1.比较运算符的结果一定是一个boolean值，成立就是true，不成立就是false</span><br><span class="line">            2.如果进行多次判断，不能连着写。</span><br><span class="line"></span><br><span class="line">    逻辑运算符：</span><br><span class="line">        与&quot;&amp;&amp;&quot;,或&quot;||&quot;,具有短路效果，如果根据左边已经可以判断得到最终结果，那么右边的代码将不再执行，从而节省一定的性能。</span><br><span class="line">            与（并且）：&amp;&amp;</span><br><span class="line">            或（或者）：||</span><br><span class="line">            非（取反）：！</span><br><span class="line">        注意事项：</span><br><span class="line">            1.逻辑运算符只能用于boolean值。</span><br><span class="line">            2.与、或需要左右各自有一个boolean值，但是取反只要有唯一的一个boolean值即可。</span><br><span class="line">            3.与、或两种运算符，如果有多个条件，可以连续写。</span><br><span class="line"></span><br><span class="line">    三元运算符：</span><br><span class="line">        一元运算符：只需要一个数据就可以进行操作的运算符。例如：取反！、自增++、自减--</span><br><span class="line">        二元运算符：需要两个数据才可以进行操作的运算符。例如：加法+、减法-。</span><br><span class="line">        三元运算符：需要三个数据才可以进行操作的运算符。</span><br><span class="line">        格式：</span><br><span class="line">            数据类型 变量名称 &#x3D; 条件判断 ？ 表达式A : 表达式B;</span><br><span class="line">        流程：</span><br><span class="line">            首先判断条件是否成立：</span><br><span class="line">                如果成立为true，那么将表达式A的值赋值给左边的变量;</span><br><span class="line">                如果不成立为false，那么将表达式B的值赋值给左边的变量;</span><br><span class="line">            二者选其一</span><br><span class="line">        注意事项：</span><br><span class="line">            1.必须同时保证表达式A和表达式B都符合左侧数据类型的要求。</span><br><span class="line">            2.三元运算符的结果必须被使用。</span><br><span class="line"></span><br><span class="line">8.方法</span><br><span class="line">    方法定义格式：</span><br><span class="line">        public static void 方法名称()&#123;</span><br><span class="line">            方法体</span><br><span class="line">        &#125;</span><br><span class="line">        方法名称命名规则和变量名相同，使用小驼峰。</span><br><span class="line">        方法体：也就是大括号当中可以包含任意条语句。</span><br><span class="line">        注意事项：</span><br><span class="line">            1.方法定义的先后顺序无所谓。</span><br><span class="line">            2.方法定义不能产生嵌套包含关系。</span><br><span class="line">            3.方法定义好了之后，不会执行的。如果要想执行，一定要进行方法的调用。</span><br><span class="line"></span><br><span class="line">    如何调用方法，格式：</span><br><span class="line">        方法名称();</span><br><span class="line"></span><br><span class="line">    使用方法时的注意事项：</span><br><span class="line">        1.方法应该定义在类中，但是不能在方法中在定义方法。不能嵌套。</span><br><span class="line">        2.方法定义前后顺序无所谓</span><br><span class="line">        3.方法定义之后不会执行，如果希望执行，一定要调用</span><br><span class="line">        4.如果方法有返回值，那么必需写上&quot;return 返回值;&quot;</span><br><span class="line">        5.return后面的返回值数据，必须和方法的返回值类型对应</span><br><span class="line">        6.对于一个void没有返回值的方法，不能return返回值，只能return自己</span><br><span class="line">        7.对于void方法中最后一行的return可以省略不写</span><br><span class="line">        8.一个方法中可以有多个return语句，但是必须保证同时只有一个会被执行到。</span><br><span class="line"></span><br><span class="line">9.选择结构</span><br><span class="line">    if、else</span><br><span class="line">        if()&#123;</span><br><span class="line">            ...</span><br><span class="line">        &#125;else&#123;</span><br><span class="line">            ...</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        if()&#123;</span><br><span class="line">            ...</span><br><span class="line">        &#125;else if()&#123;</span><br><span class="line">            ...</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        if()&#123;</span><br><span class="line">            if()&#123;</span><br><span class="line">                ...</span><br><span class="line">            &#125;else&#123;</span><br><span class="line">                ...</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;else&#123;</span><br><span class="line">            ...</span><br><span class="line">        &#125;</span><br><span class="line">    switch</span><br><span class="line">        switch(表达式)&#123;</span><br><span class="line">            case 常量值1：</span><br><span class="line">                语句体1;</span><br><span class="line">                break;</span><br><span class="line">            case 常量值2：</span><br><span class="line">                语句体2;</span><br><span class="line">                break;</span><br><span class="line">            case 常量值3：</span><br><span class="line">                语句体3;</span><br><span class="line">                break;</span><br><span class="line">            ...</span><br><span class="line">            default:</span><br><span class="line">                语句体;</span><br><span class="line">                break;</span><br><span class="line">        &#125;</span><br><span class="line">        注意事项：</span><br><span class="line">            1.多个case后面的值不可以重复</span><br><span class="line">            2.switch后面的小括号当中只能是下列数据类型：</span><br><span class="line">                基本数据类型：byte&#x2F;short&#x2F;char&#x2F;int</span><br><span class="line">                引用数据类型：String字符串、enum枚举类型</span><br><span class="line">            3.switch语句格式可以很灵活：前后顺序可以颠倒，而且break语句还可以省略。匹配哪一个case就从哪一个位置向下执行，直到遇到了break或者整体结束为止。</span><br><span class="line"></span><br><span class="line">10.循环结构</span><br><span class="line">    循环结构基本组成：</span><br><span class="line">        1.初始化语句：在循环开始最初执行，而且只做唯一一次。</span><br><span class="line">        2.条件判断：如果成立，则循环继续；如果不成立，则循环退出。</span><br><span class="line">        3.循环体：重复执行的语句。</span><br><span class="line">        4.步进语句：每次循环之后都要进行的操作，每次循环结束之后都要执行一次。</span><br><span class="line"></span><br><span class="line">    for循环</span><br><span class="line">        for(初始化语句;条件判断;步进语句)&#123;</span><br><span class="line">            循环体</span><br><span class="line">        &#125;</span><br><span class="line">    </span><br><span class="line">    while循环</span><br><span class="line">        while(条件判断)&#123;</span><br><span class="line">            循环体</span><br><span class="line">            （步进语句）</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">    do-while循环</span><br><span class="line">        do&#123;</span><br><span class="line">            循环体</span><br><span class="line">            步进语句</span><br><span class="line">        &#125;while(条件判断);</span><br><span class="line"></span><br><span class="line">    三种循环区别：</span><br><span class="line">        1.如果条件判断从来没有满足过，那么for循环和while循环将会执行0次，但是do-while循环执行至少一次。</span><br><span class="line">        2.for循环的变量在小括号中定义，只有循环内部才可以使用。while循环和do-while循环初始化语句本来就在外面，所以出出循环之后还可以继续使用。</span><br><span class="line"></span><br><span class="line">10.循环控制</span><br><span class="line">    break：</span><br><span class="line">        1.可以用在switch中，一旦执行，整个switch语句立刻结束。</span><br><span class="line">        2.还可以用在循环语句当中，一旦执行，整个循环语句立刻结束，打断循环。</span><br><span class="line"></span><br><span class="line">    continue：</span><br><span class="line">        一旦执行，立刻跳过当前次循环剩余内容，马上开始下一次循环。</span><br><span class="line"></span><br><span class="line">    死循环：</span><br><span class="line">        while(true)&#123;</span><br><span class="line">            循环体</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">    循环嵌套</span><br><span class="line"></span><br><span class="line">11.方法重载</span><br><span class="line">    方法重载(Overload)：多个方法的名称一样，但是参数列表不一样。</span><br><span class="line">    方法重载与下列因素相关：</span><br><span class="line">        1.参数个数不同</span><br><span class="line">        2.参数类型不同</span><br><span class="line">        3.参数的多类型顺序不同</span><br><span class="line">    方法重载与下列因素无关：</span><br><span class="line">        1.与参数的名称无关</span><br><span class="line">        2.与方法的返回值类型无关</span><br><span class="line">    </span><br><span class="line">12.数组</span><br><span class="line">    概念：是一种容器，可以同时存放多个数据值</span><br><span class="line"></span><br><span class="line">    数组的特点：</span><br><span class="line">        1.数组是一种引用类型</span><br><span class="line">        2.数组中的多个数据，类型必须统一</span><br><span class="line">        3.数组的长度在程序运行期间不可改变</span><br><span class="line"></span><br><span class="line">    数组的初始化：在内存当中创建一个数组，并向其中赋予一下默认值。</span><br><span class="line">    两种常见初始化方式：</span><br><span class="line">        1.动态初始化(指定长度)：在创建数组时，直接指定数组中数据元素的个数。</span><br><span class="line">            格式：数据类型[] 数组名称 &#x3D; new 数据类型[数组长度]</span><br><span class="line">        2.静态初始化(指定内容)：在创建数组时，不指定数据个数，而是直接指定数据内容</span><br><span class="line">            格式：数据类型[] 数组名称 &#x3D; new 数据类型[] &#123;元素1,元素2, ...&#125;; 或 数据类型[] 数组名称 &#x3D; &#123;元素1,元素2, ...&#125;;</span><br><span class="line">            注意事项：</span><br><span class="line">                1.虽然静态初始化没有直接告诉长度，但是根据大括号里面的元素具体内容，也可以自动推算出来长度。</span><br><span class="line">                2.静态初始化标准格式可以拆分成为两个步骤。</span><br><span class="line">                3.动态初始化也可以拆分成两个步骤。</span><br><span class="line">                4.静态初始化一旦使用省略模式，就不能拆分成两个步骤</span><br><span class="line"></span><br><span class="line">    访问数组元素：</span><br><span class="line">        直接打印数组名称，得到的是数组对应的内存地址哈希值</span><br><span class="line">        格式：数组名称[索引值]</span><br><span class="line">        注意：索引值从0开始，一直到&quot;数组长度-1&quot;为止。</span><br><span class="line"></span><br><span class="line">    数组赋值：</span><br><span class="line">        使用动态初始化数组的时候，其中的元素将会自动拥有一个默认值。规则如下：</span><br><span class="line">            如果是整数类型，默认为0</span><br><span class="line">            如果是浮点类型，默认为0.0</span><br><span class="line">            如果是字符类型，默认为&#39;\u0000&#39;</span><br><span class="line">            如果是布尔类型，默认为false</span><br><span class="line">            如果是引用类型，默认为null</span><br><span class="line">        注意事项：</span><br><span class="line">            静态初始化其实也有默认值的过程，只不过系统自动将默认值替换成了大括号中的具体数值。</span><br><span class="line"></span><br><span class="line">13.java的内存划分</span><br><span class="line">    java的内存需要划分成5个部分：</span><br><span class="line">        1.栈(Stack)：存放的都是方法中的局部变量。方法的运行一定要在栈中运行。</span><br><span class="line">            局部变量：方法的参数，或者是方法&#123;&#125;内部的变量</span><br><span class="line">            作用域：一旦超出作用域，立刻从栈内存中消失。</span><br><span class="line">        2.堆(Heap)：凡是new出来的，都在堆中</span><br><span class="line">            堆内存里面的东西都有一个地址值：16进制</span><br><span class="line">            堆内存里面的数据，都有默认值。</span><br><span class="line">                如果是整数类型，默认为0</span><br><span class="line">                如果是浮点类型，默认为0.0</span><br><span class="line">                如果是字符类型，默认为&#39;\u0000&#39;</span><br><span class="line">                如果是布尔类型，默认为false</span><br><span class="line">                如果是引用类型，默认为null</span><br><span class="line">        3.方法区(Method Area):存储.class相关信息，包含方法的信息</span><br><span class="line">        4.本地方法栈(Native Method Stack)：与操作系统相关</span><br><span class="line">        5.寄存器(pc Register)：与CPU相关</span><br></pre></td></tr></table></figure>
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/java/" rel="tag"># java</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2020/03/04/20200304/" rel="prev" title="CSS02">
+      <i class="fa fa-chevron-left"></i> CSS02
+    </a></div>
+      <div class="post-nav-item"></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+  </div>
+
+
+          </div>
+          
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#CSS"><span class="nav-number">1.</span> <span class="nav-text">CSS</span></a></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="wangzh"
+      src="/images/tx.jpg">
+  <p class="site-author-name" itemprop="name">wangzh</p>
+  <div class="site-description" itemprop="description">记录点点滴滴</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">8</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">4</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">5</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">wangzh</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> 强力驱动 v4.1.1
+  </div>
+  <span class="post-meta-divider">|</span>
+  <div class="theme-info">主题 – <a href="https://mist.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Mist</a> v7.6.0
+  </div>
+
+        
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/muse.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+</body>
+</html>
