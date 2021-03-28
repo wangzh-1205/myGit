@@ -50,7 +50,7 @@
 <meta property="og:url" content="https:&#x2F;&#x2F;wangzh-1205.github.io&#x2F;2021&#x2F;03&#x2F;28&#x2F;2021_03_28_HTML&#x2F;index.html">
 <meta property="og:site_name" content="我的笔记">
 <meta property="article:published_time" content="2021-03-28T14:25:23.856Z">
-<meta property="article:modified_time" content="2021-03-28T15:41:28.432Z">
+<meta property="article:modified_time" content="2021-03-28T16:18:27.241Z">
 <meta property="article:author" content="wangzh">
 <meta property="article:tag" content="HTML5">
 <meta name="twitter:card" content="summary">
@@ -200,10 +200,16 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
-              
 
-              <time title="创建时间：2021-03-28 22:25:23 / 修改时间：23:41:28" itemprop="dateCreated datePublished" datetime="2021-03-28T22:25:23+08:00">2021-03-28</time>
+              <time title="创建时间：2021-03-28 22:25:23" itemprop="dateCreated datePublished" datetime="2021-03-28T22:25:23+08:00">2021-03-28</time>
             </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2021-03-29 00:18:27" itemprop="dateModified" datetime="2021-03-29T00:18:27+08:00">2021-03-29</time>
+              </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="fa fa-folder-o"></i>
@@ -230,16 +236,40 @@
         <hr>
 <a id="more"></a>
 
-<h1 id="一、HTML骨架"><a href="#一、HTML骨架" class="headerlink" title="一、HTML骨架"></a>一、HTML骨架</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">&lt;!DOCTYPE html&gt;</span><br><span class="line">&lt;html lang&#x3D;&quot;en&quot;&gt;</span><br><span class="line">&lt;head&gt;</span><br><span class="line">  &lt;meta charset&#x3D;&quot;UTF-8&quot;&gt;</span><br><span class="line">  &lt;meta name&#x3D;&quot;viewport&quot; content&#x3D;&quot;...&quot;&gt;</span><br><span class="line">  &lt;title&gt;Document&lt;&#x2F;title&gt;</span><br><span class="line">  &lt;body&gt;</span><br><span class="line">    ...</span><br><span class="line">  &lt;&#x2F;body&gt;</span><br><span class="line">&lt;&#x2F;html&gt;</span><br></pre></td></tr></table></figure>
+<h1 id="HTML骨架"><a href="#HTML骨架" class="headerlink" title="HTML骨架"></a>HTML骨架</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">&lt;!DOCTYPE html&gt;</span><br><span class="line">&lt;html lang&#x3D;&quot;en&quot;&gt;</span><br><span class="line">&lt;head&gt;</span><br><span class="line">  &lt;meta charset&#x3D;&quot;UTF-8&quot;&gt;</span><br><span class="line">  &lt;meta name&#x3D;&quot;viewport&quot; content&#x3D;&quot;...&quot;&gt;</span><br><span class="line">  &lt;title&gt;Document&lt;&#x2F;title&gt;</span><br><span class="line">  &lt;body&gt;</span><br><span class="line">    ...</span><br><span class="line">  &lt;&#x2F;body&gt;</span><br><span class="line">&lt;&#x2F;html&gt;</span><br></pre></td></tr></table></figure>
 <ul>
 <li>HTML文件第一行必须是DTD(Document Type Definition，文档类型声明)，不写DTD会引发浏览器兼容问题。</li>
-<li>字符集<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;meta charset&#x3D;&quot;UTF-8&quot;&gt;</span><br></pre></td></tr></table></figure>
+</ul>
+<h1 id="字符集"><a href="#字符集" class="headerlink" title="字符集"></a>字符集</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;meta charset&#x3D;&quot;UTF-8&quot;&gt;</span><br></pre></td></tr></table></figure>
 <ul>
 <li>meta：元标签，表示网页的基础配置</li>
 <li>charset：字符集</li>
-<li>UTF-8：一种字符集</li>
+<li>UTF-8：一种字符集<ul>
+<li>UTF-8<ul>
+<li>涵盖字符：涵盖所有国家、名族的文字和大量图形字符</li>
+<li>1个汉字占3个字节</li>
+<li>适用于制作有非汉字文字的网页</li>
 </ul>
 </li>
+<li>GB2312(gbk)<ul>
+<li>收录所有汉字字符(包括简体、繁体)和英语、少量韩文、日语和少量图形字符</li>
+<li>1个汉字占2个字节</li>
+<li>适用于制作只有汉语和英语的网页，由于1个汉字仅占2字节，网页文件尺寸明显减少</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h1 id="网页标题"><a href="#网页标题" class="headerlink" title="网页标题"></a>网页标题</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;title&gt;标题名称&lt;&#x2F;title&gt;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>title标签用来设置网页的标题，文字会显示在浏览器的标签栏上。</li>
+<li>title也是搜索引擎收录网站时显示的标题，为了吸引用户点击，合理设置title是必要的。</li>
+</ul>
+<h1 id="网页关键词和网页描述"><a href="#网页关键词和网页描述" class="headerlink" title="网页关键词和网页描述"></a>网页关键词和网页描述</h1><ul>
+<li>合理设置网页的网页关键词和页面的描述，也是SEO的重要手段</li>
+<li>SEO（Search Engine Optimization，搜索引擎优化）利用搜索引擎的规则提高网站在有关搜索引擎内的自然排名，让网站在搜索引擎的结果中占据领先的地位，获得品牌收益。</li>
+<li>使用meta标签设置网页关键词和描述，name属性非常关键，用来设置meta的具体功能。<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&lt;meta name&#x3D;&quot;keywords&quot; content&#x3D;&quot;慕课网，imooc，JAVA，前端，Python，大数据&quot;&gt;</span><br><span class="line">&lt;meta name&#x3D;&quot;Description&quot; content&#x3D;&quot;慕课网（IMOOC）是IT技能学习平台&quot;&gt;</span><br></pre></td></tr></table></figure></li>
+<li>keywords：关键词；Description：页面描述。</li>
 </ul>
 
     </div>
@@ -303,7 +333,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#一、HTML骨架"><span class="nav-number">1.</span> <span class="nav-text">一、HTML骨架</span></a></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#HTML骨架"><span class="nav-number">1.</span> <span class="nav-text">HTML骨架</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#字符集"><span class="nav-number">2.</span> <span class="nav-text">字符集</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#网页标题"><span class="nav-number">3.</span> <span class="nav-text">网页标题</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#网页关键词和网页描述"><span class="nav-number">4.</span> <span class="nav-text">网页关键词和网页描述</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
